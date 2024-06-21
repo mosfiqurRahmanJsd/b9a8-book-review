@@ -1,0 +1,98 @@
+[
+    {
+        "bookId": "1",
+        "bookName": "The Silent Patient",
+        "author": "Alex Michaelides",
+        "image": "https://i.ibb.co/SXyYZTs/01.png",
+        "review": "The Silent Patient is a deeply engaging psychological thriller that kept me guessing until the very end. The protagonist's struggle with trauma and the ensuing silence is portrayed with such intensity that it draws the reader into the depths of the character's mind. The plot twists are unexpected and brilliantly executed.",
+        "totalPages": 325,
+        "rating": 4.5,
+        "category": "Thriller",
+        "tags": [
+            "Suspense",
+            "Psychological"
+        ],
+        "publisher": "Celadon Books",
+        "yearOfPublishing": 2019
+    },
+    {
+        "bookId": "2",
+        "bookName": "Educated",
+        "author": "Tara Westover",
+        "image": "https://i.ibb.co/KzXXtTD/02.jpg",
+        "review": "Educated is an inspiring memoir that chronicles Tara Westover's journey from a strict and isolated upbringing to earning a PhD from Cambridge University. Her resilience and determination to seek knowledge and build a new life for herself, despite numerous challenges, make this book a powerful testament to the transformative power of education.",
+        "totalPages": 352,
+        "rating": 4.7,
+        "category": "Memoir",
+        "tags": [
+            "Inspiration",
+            "Autobiography"
+        ],
+        "publisher": "Random House",
+        "yearOfPublishing": 2018
+    },
+    {
+        "bookId": "3",
+        "bookName": "Where the Crawdads Sing",
+        "author": "Delia Owens",
+        "image": "https://i.ibb.co/M2TxxPV/03.jpg",
+        "review": "Where the Crawdads Sing is a hauntingly beautiful novel that intertwines a compelling coming-of-age story with a gripping murder mystery. Delia Owens captures the essence of the natural world in the marshlands and weaves a narrative that explores themes of loneliness, survival, and the search for belonging. The character of Kya is unforgettable.",
+        "totalPages": 384,
+        "rating": 4.8,
+        "category": "Fiction",
+        "tags": [
+            "Mystery",
+            "Nature"
+        ],
+        "publisher": "G.P. Putnam's Sons",
+        "yearOfPublishing": 2018
+    },
+    {
+        "bookId": "4",
+        "bookName": "Becoming",
+        "author": "Michelle Obama",
+        "image": "https://i.ibb.co/MpZJfGt/04.jpg",
+        "review": "Becoming is an intimate and powerful memoir by Michelle Obama. It offers a deeply personal look at her journey from her childhood on the South Side of Chicago to her role as the First Lady of the United States. Her reflections on her experiences, challenges, and triumphs provide inspiration and insight into her life and values.",
+        "totalPages": 448,
+        "rating": 4.9,
+        "category": "Biography",
+        "tags": [
+            "Inspiration",
+            "Leadership"
+        ],
+        "publisher": "Crown Publishing Group",
+        "yearOfPublishing": 2018
+    },
+    {
+        "bookId": "5",
+        "bookName": "The Night Circus",
+        "author": "Erin Morgenstern",
+        "image": "https://i.ibb.co/VwgGwR4/05.jpg",
+        "review": "The Night Circus is a mesmerizing fantasy novel that transports readers to a magical circus that appears without warning and is open only at night. Erin Morgenstern's enchanting prose and vivid descriptions create an immersive world filled with wonder and intrigue. The story of rival magicians Celia and Marco is both captivating and beautifully crafted.",
+        "totalPages": 512,
+        "rating": 4.6,
+        "category": "Fantasy",
+        "tags": [
+            "Magic",
+            "Romance"
+        ],
+        "publisher": "Doubleday",
+        "yearOfPublishing": 2011
+    },
+    {
+        "bookId": "6",
+        "bookName": "Sapiens: A Brief History of Humankind",
+        "author": "Yuval Noah Harari",
+        "image": "https://i.ibb.co/sVGQ9ZR/06.jpg",
+        "review": "Sapiens offers a thought-provoking exploration of the history of Homo sapiens, from the emergence of our species to the present day. Yuval Noah Harari examines how biology and history have defined us and influenced our societies. This book challenges readers to think about the ways in which our actions have shaped the world and our future.",
+        "totalPages": 464,
+        "rating": 4.7,
+        "category": "Non-Fiction",
+        "tags": [
+            "History",
+            "Anthropology"
+        ],
+        "publisher": "Harper",
+        "yearOfPublishing": 2015
+    }
+]
