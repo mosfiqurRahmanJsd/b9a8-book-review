@@ -8,7 +8,7 @@ const ErrorPage = () => {
             <p className="text-lg mb-8 text-center">
                 Oops! The page you are looking for does not exist. It might have been moved or deleted.
             </p>
-            <Link to="/" className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+            <Link to="/" className="px-4  py-2 bg-[#59C6D2] text-white rounded hover:bg-[#23BE0A]">
                 Go Back Home
             </Link>
         </div>
