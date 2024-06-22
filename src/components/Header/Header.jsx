@@ -4,7 +4,7 @@ import './Header.css'
 const Header = () => {
 
     return (
-        <div className="navbar container md:mx-auto work-sans-font">
+        <div className="navbar container md:mx-auto work-sans-font mb-12">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
