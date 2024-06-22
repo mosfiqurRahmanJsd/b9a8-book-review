@@ -2,7 +2,7 @@
 
 const Hero = () => {
     return (
-        <div className="hero min-h-[554px] rounded-[24px] bg-[#F3F3F3] container md:mx-auto px-32 py-20">
+        <div className="hero min-h-[554px] rounded-[24px] bg-[#F3F3F3] container md:mx-auto px-32 py-20 mb-24">
             <div className="hero-content flex  flex-col lg:flex-row-reverse gap-80">
                 <img src="https://i.ibb.co/5kktDs6/dsds.png" className="w-fit" />
                 <div className="playfair-display-font">
