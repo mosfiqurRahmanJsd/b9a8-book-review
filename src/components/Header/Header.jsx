@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
+import './Header.css'
 
 const Header = () => {
+
     return (
         <div className="navbar container md:mx-auto work-sans-font">
             <div className="navbar-start">
@@ -23,52 +25,80 @@ const Header = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-[18px]">
+
                     <li className="mx-2">
                         <NavLink
                             to='/'
-                            className={({ isActive }) =>
-                                isActive ? 'border-2  border-[#23BE0A] focus:bg-white px-5 py-[14px] rounded-xl' : 'border-2 border-white px-5 py-[14px]  rounded-xl hover:bg-[#23BE0A]'
-                            }>
-                            Home
-                        </NavLink>
+                            style={({ isActive }) => ({
+                                backgroundColor: isActive ? 'white' : 'transparent',
+                                color: isActive ? '#23BE0A' : 'black',
+                                fontWeight: isActive ? '600' : '400',
+                                border: isActive ? '2px solid #23BE0A' : '2px solid white',
+                                borderRadius: isActive ? '8px' : '8px',
+                                padding: isActive ? '14px 20px' : '14px 20px'
+
+                            })}
+                        > Home </NavLink>
                     </li>
                     <li className="mx-2">
                         <NavLink
                             to='listedBook'
-                            className={({ isActive }) =>
-                                isActive ? 'border-2 border-[#23BE0A] focus:bg-white px-5 py-[14px] rounded-xl' : 'border-2 border-white px-5 py-[14px]  rounded-xl hover:bg-[#23BE0A]'
-                            }>
-                            Listed Books
-                        </NavLink>
+                            style={({ isActive }) => ({
+                                backgroundColor: isActive ? 'white' : 'transparent',
+                                color: isActive ? '#23BE0A' : 'black',
+                                fontWeight: isActive ? '600' : '400',
+                                border: isActive ? '2px solid #23BE0A' : '2px solid white',
+                                borderRadius: isActive ? '8px' : '8px',
+                                padding: isActive ? '14px 20px' : '14px 20px'
+
+                            })}
+
+                        > Listed Books </NavLink>
                     </li>
                     <li className="mx-2">
                         <NavLink
                             to='pagesToRead'
-                            className={({ isActive }) =>
-                                isActive ? 'border-2 border-[#23BE0A] focus:bg-white px-5 py-[14px] rounded-xl' : 'border-2 border-white px-5 py-[14px]  rounded-xl hover:bg-[#23BE0A]'
-                            }>
-                            Pages to Read
-                        </NavLink>
+                            style={({ isActive }) => ({
+                                backgroundColor: isActive ? 'white' : 'transparent',
+                                color: isActive ? '#23BE0A' : 'black',
+                                fontWeight: isActive ? '600' : '400',
+                                border: isActive ? '2px solid #23BE0A' : '2px solid white',
+                                borderRadius: isActive ? '8px' : '8px',
+                                padding: isActive ? '14px 20px' : '14px 20px'
+
+                            })}
+
+                        > Pages to Read </NavLink>
                     </li>
                     <li className="mx-2">
                         <NavLink
                             to='faq'
-                            className={({ isActive }) =>
-                                isActive ? 'border-2 border-[#23BE0A] focus:bg-white px-5 py-[14px] rounded-xl' : 'border-2 border-white px-5 py-[14px]  rounded-xl hover:bg-[#23BE0A]'
-                            }>
-                            FAQ
-                        </NavLink>
+                            style={({ isActive }) => ({
+                                backgroundColor: isActive ? 'white' : 'transparent',
+                                color: isActive ? '#23BE0A' : 'black',
+                                fontWeight: isActive ? '600' : '400',
+                                border: isActive ? '2px solid #23BE0A' : '2px solid white',
+                                borderRadius: isActive ? '8px' : '8px',
+                                padding: isActive ? '14px 20px' : '14px 20px'
+
+                            })}
+                        > FAQ </NavLink>
                     </li>
                     <li className="mx-2">
                         <NavLink
                             to='aboutUs'
-                            className={({ isActive }) =>
-                                isActive ? 'border-2 border-[#23BE0A] focus:bg-white px-5 py-[14px] rounded-xl' : 'border-2 border-white px-5 py-[14px]  rounded-xl hover:bg-[#23BE0A]'
-                            }>
-                            About Us
-                        </NavLink>
-                    </li>
+                            style={({ isActive }) => ({
+                                backgroundColor: isActive ? 'white' : 'transparent',
+                                color: isActive ? '#23BE0A' : 'black',
+                                fontWeight: isActive ? '600' : '400',
+                                border: isActive ? '2px solid #23BE0A' : '2px solid white',
+                                borderRadius: isActive ? '8px' : '8px',
+                                padding: isActive ? '14px 20px' : '14px 20px'
 
+                            })}
+
+                        > About Us </NavLink>
+                    </li>
 
 
 
