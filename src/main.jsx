@@ -12,6 +12,7 @@ import ListedBooks from './components/ListedBooks/ListedBooks';
 import PagesToRead from './components/PagesToRead/PagesToRead';
 import AboutUs from './components/AboutUs/AboutUs';
 import Faq from './components/Faq/Faq';
+import BookDetails from './components/BookDetails/BookDetails';
 
 const router = createBrowserRouter([
   {
@@ -25,21 +26,31 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path: "listedBook",
+        path: "/book/:bookId",
+        loader: async ({ params }) => {
+          const response = await fetch(`books.json`);
+          const books = await response.json();
+          return books.find(book => book.bookId === params.bookId);
+        },
+        element: <BookDetails />
+      },
+      {
+        path: "/listedBook",
         element: <ListedBooks></ListedBooks>
       },
       {
-        path: "pagesToRead",
+        path: "/pagesToRead",
         element: <PagesToRead></PagesToRead>
       },
       {
-        path: "aboutUs",
+        path: "/aboutUs",
         element: <AboutUs></AboutUs>
       },
       {
-        path: "faq",
+        path: "/faq",
         element: <Faq></Faq>
-      }
+      },
+
     ],
   },
 ]);
