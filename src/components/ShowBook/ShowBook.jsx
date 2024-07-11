@@ -6,11 +6,11 @@ import { LuStickyNote } from "react-icons/lu";
 import { NavLink } from 'react-router-dom';
 
 
-const ReadBook = ({ read }) => {
+const ShowBook = ({ read }) => {
     const { image, bookName, author, tags, yearOfPublishing, publisher, totalPages, category, rating, bookId } = read;
     return (
-        <div className="flex border-2 mt-8 p-6 rounded-2xl gap-6">
-            <div className='w-1/5 bg-[#F3F3F3] flex justify-center items-center rounded-2xl'>
+        <div className="flex md:flex-row flex-col border-2 mt-8 p-6 rounded-2xl gap-6 ">
+            <div className='md:w-1/5 bg-[#F3F3F3] flex justify-center items-center rounded-2xl'>
                 <img className='w-28 h-44' src={image} alt="" />
             </div>
             <div className='w-4/5'>
@@ -39,8 +39,8 @@ const ReadBook = ({ read }) => {
     );
 };
 
-ReadBook.propTypes = {
+ShowBook.propTypes = {
     read: PropTypes.object
 }
 
-export default ReadBook;
+export default ShowBook;

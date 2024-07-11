@@ -1,22 +1,48 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { getStoredRead } from "../../utility/localstorage";
-import ReadBook from "../ReadBook/ReadBook";
-
+import { getStoredRead, getStoredWishlist } from "../../utility/localstorage";
+import ShowBook from "../ShowBook/ShowBook";
 
 const ListedBooks = () => {
-    const books = useLoaderData()
+    const books = useLoaderData();
 
     const [readBook, setReadBook] = useState([]);
+    const [wishlistBook, setWishlistBook] = useState([]);
+    const [sortOption, setSortOption] = useState("");
 
     useEffect(() => {
         const storedReadBookId = getStoredRead();
         if (books.length > 0) {
-            const readBooks = books.filter(book => storedReadBookId.includes(book.bookId))
+            const readBooks = books.filter(book => storedReadBookId.includes(book.bookId));
             setReadBook(readBooks);
         }
-    }, [])
+    }, [books]);
 
+    useEffect(() => {
+        const storedWishlistBookId = getStoredWishlist();
+        if (books.length > 0) {
+            const wishlistBooks = books.filter(book => storedWishlistBookId.includes(book.bookId));
+            setWishlistBook(wishlistBooks);
+        }
+    }, [books]);
+
+    useEffect(() => {
+        const sortBooks = (books) => {
+            switch (sortOption) {
+                case "Rating":
+                    return books.sort((a, b) => b.rating - a.rating);
+                case "Number of pages":
+                    return books.sort((a, b) => b.totalPages - a.totalPages);
+                case "Publisher year":
+                    return books.sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
+                default:
+                    return books;
+            }
+        };
+
+        setReadBook(prevReadBook => sortBooks([...prevReadBook]));
+        setWishlistBook(prevWishlistBook => sortBooks([...prevWishlistBook]));
+    }, [sortOption]);
 
     return (
         <div className="container md:mx-auto">
@@ -24,40 +50,43 @@ const ListedBooks = () => {
                 <h2 className="work-sans-font font-bold text-3xl">Books</h2>
             </div>
 
-            <div className="text-center">
-                <select className="select select-md bg-[#23BE0A] text-white work-sans-font text-[18px] font-semibold">
-                    <option disabled selected>Sort By</option>
-                    <option>Normal Apple</option>
-                    <option>Normal Orange</option>
-                    <option>Normal Tomato</option>
+            <div className="text-center mb-8">
+                <select
+                    className="select select-md bg-[#23BE0A] text-white work-sans-font text-[18px] font-semibold"
+                    onChange={(e) => setSortOption(e.target.value)}
+                    value={sortOption}
+                >
+                    <option selected>Sort By</option>
+                    <option value="Rating">Rating</option>
+                    <option value="Number of pages">Number of pages</option>
+                    <option value="Publisher year">Publisher year</option>
                 </select>
             </div>
 
             <div role="tablist" className="tabs tabs-lifted">
-
-
                 <input
                     type="radio"
-                    name="my_tabs_2"
+                    id="read-books"
+                    name="my_tabs"
                     role="tab"
                     className="tab text-xl"
-                    aria-label="Read Books "
-                    defaultChecked />
-                <div role="tabpanel" className="tab-content  border-base-300 border-b-0 border-s-0 border-e-0  ">
-
-                    {
-                        readBook.map(read => <ReadBook read={read} key={read.bookId}></ReadBook>)
-                    }
+                    aria-label="Read Books"
+                    defaultChecked
+                />
+                <div role="tabpanel" className="tab-content border-base-300 border-b-0 border-s-0 border-e-0">
+                    {readBook.map(read => <ShowBook read={read} key={read.bookId}></ShowBook>)}
                 </div>
 
                 <input
                     type="radio"
-                    name="my_tabs_2"
+                    id="wishlist-books"
+                    name="my_tabs"
                     role="tab"
-                    className="tab text-xl "
-                    aria-label="Wishlist Books" />
-                <div role="tabpanel" className="tab-content  border-base-300 border-b-0 border-s-0 border-e-0  ">
-                    Bokfndfjhkdjf
+                    className="tab text-xl"
+                    aria-label="Wishlist Books"
+                />
+                <div role="tabpanel" className="tab-content border-base-300 border-b-0 border-s-0 border-e-0">
+                    {wishlistBook.map(read => <ShowBook read={read} key={read.bookId}></ShowBook>)}
                 </div>
             </div>
         </div>
