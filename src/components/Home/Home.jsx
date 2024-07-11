@@ -1,15 +1,24 @@
 
 import Hero from "../Hero/Hero";
 import Book from "../Book/Book";
-import { useLoaderData } from "react-router-dom";
 import PropTypes from 'prop-types';
+import { useEffect, useState } from "react";
+
+
+
+
 
 
 
 
 const Home = () => {
 
-    const books = useLoaderData();
+    const [books, setBooks] = useState([]);
+    useEffect(() => {
+        fetch('books.json')
+            .then(res => res.json())
+            .then(data => setBooks(data))
+    }, [])
 
 
     return (
@@ -25,7 +34,6 @@ const Home = () => {
                 </div>
             </div>
         </>
-
     );
 };
 

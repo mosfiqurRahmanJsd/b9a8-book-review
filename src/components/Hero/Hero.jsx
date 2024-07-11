@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 
 
 const Hero = () => {
@@ -8,7 +9,7 @@ const Hero = () => {
                 <div className="playfair-display-font">
                     <h1 className="text-[56px] leading-[84px] text-[#131313] font-bold py-6">Books to freshen up <br /> your bookshelf</h1>
 
-                    <a className="btn work-sans-font md:mr-4 bg-[#23BE0A] text-[18px] text-white font-semibold btn-success">View The List</a>
+                    <NavLink to='/listedBook' className="btn work-sans-font md:mr-4 bg-[#23BE0A] text-[18px] text-white font-semibold btn-success">View The List</NavLink>
                 </div>
             </div>
         </div>
