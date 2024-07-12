@@ -30,7 +30,7 @@ const ShowBook = ({ read }) => {
                 <div className='mt-4 flex items-center'>
                     <p className='me-3 py-3 px-5 bg-[#E0EEFF] rounded-3xl work-sans-font text-[#328EFF]'>Category: {category}</p>
                     <p className='me-3 py-3 px-5 bg-[#FFF3E0] rounded-3xl work-sans-font text-[#FFAC33]'>Rating: {rating}</p>
-                    <NavLink to={`/book/${bookId}`} className="btn work-sans-font md:mr-4 bg-[#23BE0A] text-[18px] text-white font-semibold btn-success rounded-3xl">View The List</NavLink>
+                    <NavLink to={`/book/${bookId}`} className="btn work-sans-font md:mr-4 bg-[#23BE0A] text-[18px] text-white font-semibold btn-success rounded-3xl">View Details</NavLink>
                 </div>
 
             </div>
